@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="98" height="98" viewBox="0 0 98 98">
+    <defs>
+        <rect id="b" width="90" height="90" rx="6"/>
+        <filter id="a" width="115.6%" height="115.6%" x="-7.8%" y="-5.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy="2" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.901960784 0 0 0 0 0.925490196 0 0 0 0 0.952941176 0 0 0 0.472792832 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g stroke="#2553A8">
+            <path fill="#E6ECF3" stroke-width=".8" d="M24.4 20.4h49.2v37.336H24.4z"/>
+            <path fill="#E6ECF3" stroke-width=".8" d="M30.4 19.353v38.383h8.2V19.353c-1.371-.636-2.737-.953-4.1-.953-1.363 0-2.729.317-4.1.953z"/>
+            <path stroke-linecap="square" stroke-opacity=".497" stroke-width=".4" d="M30.5 36.5h7.871"/>
+            <path fill="#E6ECF3" stroke-width=".8" d="M45.4 19.353v38.383h8.2V19.353c-1.371-.636-2.737-.953-4.1-.953-1.363 0-2.729.317-4.1.953z"/>
+            <path stroke-linecap="square" stroke-opacity=".5" stroke-width=".4" d="M45.5 36.5h7.871"/>
+            <g fill="#E6ECF3" stroke-width=".8">
+                <path d="M60.4 19.353v38.383h8.2V19.353c-1.371-.636-2.737-.953-4.1-.953-1.363 0-2.729.317-4.1.953z"/>
+            </g>
+        </g>
+        <path stroke="#2553A8" stroke-linecap="square" stroke-opacity=".5" stroke-width=".4" d="M60.5 36.5h7.871"/>
+        <g transform="translate(4 2)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <rect width="89" height="89" x=".5" y=".5" stroke="#2553A8" stroke-linejoin="square" rx="6"/>
+        </g>
+    </g>
+</svg>
