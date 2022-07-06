@@ -4,7 +4,7 @@ function NavBar() {
     return (
         <div className='h-[8vh] flex items-center'>
             <div className="logo  md:ml-[10%]">
-                Logo
+                <img src='/thread-02.svg' className='h-full w-1/2' alt='' />
             </div>
             <div className="menu ml-[5%] md:ml-[20%]">
                 <ul className='flex text-[#808387] gap-5 md:gap-16'>

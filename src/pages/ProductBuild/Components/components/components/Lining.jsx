@@ -8,10 +8,10 @@ function Lining({ setSelected, setSelector }) {
         <div className='content mt-5'>
             <div className="buttons flex justify-center gap-[70%] font-bold">
                 <div className="back">
-                    <span onClick={() => setSelected(2)}>Back</span>
+                    <span className='text-blue-700 font-medium' onClick={() => setSelected(2)}>Back</span>
                 </div>
-                <div className="next">
-                    <button onClick={() => setSelector(1)}>Next</button>
+                <div className="">
+                    <button className='border w-20  text-white rounded-2xl bg-blue-800  hover:text-blue-800 hover:bg-white duration-300 text-sm font-medium h-7' onClick={() => setSelector(1)}>Next {'>'}</button>
                 </div>
             </div>
             <div className="qn pl-5 pr-16 font-semibold text-sm mt-5">

@@ -9,10 +9,10 @@ function Pole({ setSelector }) {
         <>
             <div className="button flex justify-center mt-5 gap-[70%] font-bold">
                 <div className="back">
-                    <span onClick={() => setSelector(0)}>Back</span>
+                    <span className='text-blue-700 font-medium' onClick={() => setSelector(0)}>Back</span>
                 </div>
                 <div className="next">
-                    <button onClick={() => setSelector(2)}>Next</button>
+                    <button className='border w-20  text-white rounded-2xl bg-blue-800  hover:text-blue-800 hover:bg-white duration-300 text-sm font-medium h-7' onClick={() => setSelector(2)}>Next {'>'}</button>
                 </div>
             </div>
             <div className='flex flex-col items-center gap-3 font-semibold mt-5'>

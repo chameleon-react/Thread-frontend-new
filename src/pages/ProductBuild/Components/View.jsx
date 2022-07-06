@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 
 function View() {
     const { fabricType } = useSelector(state => state.fabric)
+    const { totalPrice } = useSelector(state => state.price)
     return (
         <div className='w-full h-[100%]  md:h-full relative'>
             <div className="buttons absolute     left-[65%] top-[3%] border border-[#B6B7BA] rounded-3xl h-10 w-[30%] flex justify-center items-center  font-bold text-[#85888C]">
@@ -13,7 +14,7 @@ function View() {
                     <div className=""></div>
                     <div className=""></div>
                 </div>
-                <button className='w-1/2'>...</button>
+                <button className='w-1/2'>{totalPrice ? totalPrice : '...'}</button>
             </div>
             <div className="saveAndShare absolute top-[3%] left-[3%] flex flex-col gap-5 ">
                 <div className="save flex flex-col hover:text-blue-400">
@@ -23,7 +24,7 @@ function View() {
                 <BiShareAlt className='text-2xl hover:text-blue-400' />
             </div>
             <div className={`view flex justify-center items-center flex-col w-full h-full`}>
-                <img src={`/fabric/${fabricType} `} alt=''/>
+                <img src={`/fabric/${fabricType} `} alt='' />
             </div>
         </div>
     )

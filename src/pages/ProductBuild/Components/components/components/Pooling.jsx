@@ -9,10 +9,10 @@ function Pooling({ setSelector }) {
         <>
             <div className="button flex justify-center mt-5 gap-[70%] font-bold">
                 <div className="back">
-                    <span onClick={() => setSelector(1)}>Back</span>
+                    <span className='text-blue-700 font-medium' onClick={() => setSelector(1)}>Back</span>
                 </div>
                 <div className="next">
-                    <button onClick={() => window.alert('Pending')}>Next</button>
+                    <button className='border w-20  text-white rounded-2xl bg-blue-800  hover:text-blue-800 hover:bg-white duration-300 text-sm font-medium h-7' onClick={() => window.alert('Pending')}>Next {'>'}</button>
                 </div>
             </div>
             <div className="qn pl-5 pr-10 font-semibold text-sm mt-5">
