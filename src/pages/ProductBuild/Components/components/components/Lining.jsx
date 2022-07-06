@@ -19,11 +19,11 @@ function Lining({ setSelected, setSelector }) {
             </div>
             <div className="button flex flex-col gap-3 mt-5 items-center font-semibold">
                 <button className={`${lining === 'Unlined' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Unlined'))}>Unlined</button>
-                <button className={`${lining === 'Lined' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Lined'))}>Lined</button>
+                <button className={`${lining === 'Cotton Sateen Lined' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Cotton Sateen Lined'))}>Cotton Sateen Lined</button>
                 <button className={`${lining === 'Blackout Lined' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Blackout Lined'))}>Blackout Lined</button>
-                <button className={`${lining === 'Interlined' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Interlined'))}>Interlined</button>
-                <button className={`${lining === 'Interlined Blackout' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Interlined Blackout'))}>Interlined Blackout</button>
-                <button className={`${lining === 'Thermal Lined' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Thermal Lined'))}>Thermal Lined</button>
+                <button className={`${lining === 'Bonded Fleece Blackout Lining' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Bonded Fleece Blackout Lining'))}>Bonded Fleece Blackout Lining</button>
+                <button className={`${lining === 'Thermal Dim Out' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Thermal Dim Out'))}>Thermal Dim Out</button>
+                <button className={`${lining === 'Interlind' && 'border-[#2553a8] border-2'} border h-10 rounded-lg w-[90%] text-left pl-5`} onClick={() => dispatch(setLining('Interlind'))}>Interlind</button>
             </div>
         </div>
     )

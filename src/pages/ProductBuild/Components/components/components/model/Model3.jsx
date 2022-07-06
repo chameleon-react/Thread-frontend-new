@@ -1,8 +1,9 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-
+import { useSelector,useDispatch } from 'react-redux'
+import {setFabricStyle} from '../../../../../../redux/slice/price'
 function Model3({ setShowMyModel }) {
     const { windowName, measurementItem, hasPole, width, height } = useSelector(state => state.measurement)
+    const dispatch = useDispatch()
     return (
         <div className='fixed inset-0 flex items-center justify-center bg-opacity-30 backdrop-blur-sm'>
             <div className={` h-[40rem] bg-[#F8F9FA] w-[40rem] rounded-3xl`}>
@@ -58,7 +59,7 @@ function Model3({ setShowMyModel }) {
                     </div>
                 </div>
                 <div className="close flex justify-center mt-10">
-                    <button onClick={() => setShowMyModel(false)} className={`h-10 w-32 border rounded-3xl font-semibold text-lg text-white  bg-[#2553A8] hover:bg-white hover:text-[#2553A8] duration-200`} >Close</button>
+                    <button onClick={() => {dispatch(setFabricStyle('pencil'));setShowMyModel(false)}} className={`h-10 w-32 border rounded-3xl font-semibold text-lg text-white  bg-[#2553A8] hover:bg-white hover:text-[#2553A8] duration-200`} >Close</button>
                 </div>
             </div>
         </div>
