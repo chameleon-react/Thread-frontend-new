@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import SignUp from './SignUp'
 
 function ViewDetails({ setViewDetails }) {
     const { fabricType, pairOrNot, lining, look } = useSelector(state => state.fabric)
     const { measurementItem, windowName, width, height, } = useSelector(state => state.measurement)
     const { makingPrice, boxingPrice, totalPrice } = useSelector(state => state.price)
+    const [signUp, setSignUp] = useState(false)
     return (
         <div className='fixed inset-0 flex items-center justify-center bg-opacity-30 backdrop-blur-sm'>
             <div className={` h-[40rem] bg-[#F8F9FA] w-[40rem] rounded-3xl`}>
@@ -54,10 +56,13 @@ function ViewDetails({ setViewDetails }) {
                         <span className='font-bold'>{totalPrice}</span>
                     </div>
                     <div className="flex gap-10 mt-10">
-                        <button className='h-10 w-32 border rounded-3xl font-semibold text-lg text-white bg-[#2553A8] hover:bg-white hover:text-[#2553A8] duration-200'>SAVE</button>
-                        <button className='h-10 w-32 border rounded-3xl font-semibold text-lg text-white bg-[#2553A8] hover:bg-white hover:text-[#2553A8] duration-200'>EMAIL</button>
-                        <button className='h-10 w-32 border rounded-3xl font-semibold text-lg text-white bg-[#2553A8] hover:bg-white hover:text-[#2553A8] duration-200'>WHATSAPP</button>
+                        <button className='h-10 w-32 border rounded-3xl font-semibold text-lg text-white bg-[#2553A8] hover:bg-white hover:text-[#2553A8] duration-200' onClick={()=>setSignUp(true)}>SAVE</button>
+                        <button className='h-10 w-32 border rounded-3xl font-semibold text-lg text-white bg-[#2553A8] hover:bg-white hover:text-[#2553A8] duration-200' onClick={()=>setSignUp(true)}>EMAIL</button>
+                        <button className='h-10 w-32 border rounded-3xl font-semibold text-lg text-white bg-[#2553A8] hover:bg-white hover:text-[#2553A8] duration-200' onClick={()=>setSignUp(true)}>WHATSAPP</button>
                     </div>
+                    {
+                        signUp && <SignUp setSignUp={setSignUp}/>
+                    }
                 </div>
             </div>
         </div>

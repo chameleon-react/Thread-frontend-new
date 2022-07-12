@@ -16,13 +16,6 @@ function View() {
                 </div>
                 <button className='w-1/2'>{totalPrice ? totalPrice : '...'}</button>
             </div>
-            <div className="saveAndShare absolute top-[3%] left-[3%] flex flex-col gap-5 ">
-                <div className="save flex flex-col hover:text-blue-400">
-                    <BiSave className='text-2xl' />
-                    <span className='text-xs font-semibold'>SAVE</span>
-                </div>
-                <BiShareAlt className='text-2xl hover:text-blue-400' />
-            </div>
             <div className={`view flex justify-center items-center flex-col w-full h-full`}>
                 <img src={`/fabric/${fabricType} `} alt='' />
             </div>
