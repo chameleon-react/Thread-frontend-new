@@ -2,7 +2,7 @@ import React from 'react'
 import { setFabricType } from '../../../../../redux/slice/fabricSlice'
 import { setFabricInitialPrice } from '../../../../../redux/slice/price'
 import { useDispatch } from 'react-redux'
-function AllFabrics() {
+function AllFabrics({setdisable}) {
 
   const dispatch = useDispatch()
   return (
@@ -10,7 +10,7 @@ function AllFabrics() {
       <div className="odin ml-5 mt-5">
         <span className='font-semibold'>Odin</span>
       </div>
-      <div className='flex gap-5 flex-wrap ml-5 mt-5'>
+      <div className='flex gap-5 flex-wrap ml-5 mt-5' onClick={()=>setdisable(false)}>
         <button className='h-12 w-12 rounded-full bg-cover' style={{ backgroundImage: "url('/fabric/Porcelain.png')" }} onClick={() => { dispatch(setFabricType('Porcelains.jpg')); dispatch(setFabricInitialPrice(200)) }}></button>
         <button className='h-12 w-12 rounded-full bg-cover' style={{ backgroundImage: "url('/fabric/Alabaster.jpg')" }} onClick={() => { dispatch(setFabricType('Alabasters.jpg')); dispatch(setFabricInitialPrice(250)) }}></button>
         <button className='h-12 w-12 rounded-full bg-cover' style={{ backgroundImage: "url('/fabric/Mink.jpg')" }} onClick={() => { dispatch(setFabricType('Minks.jpg')); dispatch(setFabricInitialPrice(300)) }}></button>

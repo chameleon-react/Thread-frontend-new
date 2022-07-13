@@ -4,7 +4,6 @@ import SelectionPart from "./Components/SelectionPart";
 import View from "./Components/View";
 
 function ProductBuild() {
-  document.title = 'Product Builder'
   return <div >
     <NavBar />
     <div className="body bg-[#F2F5F7] w-[100%] h-[92vh] flex  justify-center items-center">

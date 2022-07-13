@@ -45,12 +45,12 @@ function SignUp({setSignUp}) {
                             <input value={email} onChange={e=>dispatch(setEmail(e.target.value))} required placeholder='Email' className='h-10 text-center border rounded-md w-56' type="email" id="email" />
                         </div>
                         <div className="fnam flex gap-10 justify-center font-medium w-full ">
-                            <label className='w-1/2' htmlFor="fname">F Name</label>
-                            <input value={fName} onChange={e=>dispatch(setFName(e.target.value))} required placeholder='F Name' className='h-10 text-center border rounded-md w-56' type="text"  id="fname" />
+                            <label className='w-1/2' htmlFor="fname">First Name</label>
+                            <input value={fName} onChange={e=>dispatch(setFName(e.target.value))} required placeholder='First Name' className='h-10 text-center border rounded-md w-56' type="text"  id="fname" />
                         </div>
                         <div className="lname flex gap-10 justify-center font-medium w-full ">
-                        <label className='w-1/2' htmlFor="lname">L Name</label>
-                            <input value={lName} onChange={e=>dispatch(setLName(e.target.value))} required placeholder='L name' className='h-10 text-center border rounded-md w-56' type="text"  id="lname" />
+                        <label className='w-1/2' htmlFor="lname">Last Name</label>
+                            <input value={lName} onChange={e=>dispatch(setLName(e.target.value))} required placeholder='Last name' className='h-10 text-center border rounded-md w-56' type="text"  id="lname" />
                         </div>
                         <div className="phone flex gap-10 justify-center font-medium w-full ">
                         <label className='w-1/2' htmlFor="phone">Mobile</label>
@@ -64,8 +64,8 @@ function SignUp({setSignUp}) {
                             <input onChange={e=>{setpasswords({...passwords,password:e.target.value})}} value={passwords.password} required placeholder='Password' className='h-10 text-center border rounded-md w-56' type="password"  id="password" />
                         </div>
                         <div className="repassword flex gap-10 justify-center font-medium w-full ">
-                            <label className='w-1/2' htmlFor="repassword">Password</label>
-                            <input onChange={e=>{setpasswords({...passwords,repassword:e.target.value})}} value={passwords.repassword} required placeholder='Re password' className='h-10 text-center border rounded-md w-56' type="password"  id="repassword" />
+                            <label className='w-1/2' htmlFor="repassword">Confirm Password</label>
+                            <input onChange={e=>{setpasswords({...passwords,repassword:e.target.value})}} value={passwords.repassword} required placeholder='Confirm Password' className='h-10 text-center border rounded-md w-56' type="password"  id="repassword" />
                         </div>
                         <div className="submit w-full h-full flex justify-center">
                             <button className='border w-24 h-10 rounded-xl' type='submit' >Sign up</button>

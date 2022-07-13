@@ -2,6 +2,7 @@ import React from 'react'
 import Look from './components/Look'
 import { setPairOrNot } from '../../../../redux/slice/fabricSlice'
 import { useSelector, useDispatch } from 'react-redux'
+import { useState } from 'react'
 function Style({ setSelected }) {
   const dispatch = useDispatch()
   const { pairOrNot } = useSelector(state => state.fabric)
@@ -17,7 +18,7 @@ function Style({ setSelected }) {
         <div className="pairOrSingle">
           <span className='font-semibold text-lg'>Pair or single panel?</span>
         </div>
-        <div className="pairOrSingle flex gap-5">
+        <div className="pairOrSingle flex gap-5" >
 
           <div className="img h-24 w 24">
             <img className={`${pairOrNot === 'pair' && 'hidden'}`} src='/image/pairNotSelected.svg' alt="" onClick={() => dispatch(setPairOrNot('pair'))} />
