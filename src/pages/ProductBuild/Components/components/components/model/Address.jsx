@@ -1,8 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { setaddress } from '../../../../../../redux/slice/userDetails'
+import axios from 'axios'
+import backendIp from '../../../../../../backendIp'
+import Order from './Order'
 function Address({ setAddress }) {
+  const {user} = useSelector(state=>state)
+  const [confirmOrder, setConfirmOrder] = useState(false)
+  console.log(user)
   const dispatch = useDispatch()
   const [address, setAddres] = useState({
     flatNo: '',
@@ -14,7 +20,13 @@ function Address({ setAddress }) {
     zipcode: '',
   })
   const formHandler = () => {
-    dispatch(setaddress(address))
+    axios.post(`${backendIp}/user`,user).then(res=>{
+      if(res.data){
+        setConfirmOrder(true)
+      }else{
+        window.alert("User Already exist")
+      }
+    })
   }
   return (
     <div className='fixed inset-0 flex items-center justify-center bg-opacity-30 backdrop-blur-sm'>
@@ -68,11 +80,13 @@ function Address({ setAddress }) {
               <input value={address.zipcode} onChange={e=>{setAddres({...address,zipcode:e.target.value})}} required placeholder='Zipcode' className='h-10 text-center border rounded-md w-56' type="text" id='zipcode' />
             </div>
             <div className="submit w-full h-full flex justify-center">
-              <button className='border w-24 h-10 rounded-xl' type='submit' >Sign up</button>
+              <button onClick={()=>{dispatch(setaddress(address))}} className='border w-24 h-10 rounded-xl' type='submit' >Sign up</button>
             </div>
-
           </form>
         </div>
+        {
+          confirmOrder && <Order setConfirmOrder={setConfirmOrder}/>
+        }
       </div>
     </div>
   )
